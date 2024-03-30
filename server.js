@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const corsConfig = {
-    origin:"https://mern-auth-backend-psi.vercel.app/",
+    origin:"https://waste-donation-backend.vercel.app/",
     credential : true,
     methods :['GET','POST','PUT','DELETE'],
 };
