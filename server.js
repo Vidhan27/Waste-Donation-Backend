@@ -10,6 +10,7 @@ app.options("",cors(corsConfig));
 app.use(cors(corsConfig));
 
 const passport = require('passport');
+const dbConnect = require("./config/dbConnection.js");
 const flash = require('connect-flash');
 const session = require('express-session');
 const methodOverride = require('method-override');
@@ -19,7 +20,7 @@ const donorRoutes = require('./routes/donor');
 const agentRoutes = require('./routes/agent');
 
 require("dotenv").config();
-require("./config/dbConnection.js")();
+dbConnect();
 require('./config/passport')(passport);
 
 
